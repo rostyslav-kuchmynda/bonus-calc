@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Bonus Calculator</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3 pt-3 bg-dark text-white">Bonus Calculator</h1>
+                    <!-- FORM -->
+                    <form id="calc-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="revenue" placeholder="Your Monthly Revenue">
+                            </div>
+                        </div>
+                        <!-- TEAM -->
+                        <div class="form-check">
+                            <h4 class="mt-2 bg-light shadow-sm rounded">Team %</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="teamGroup" id="team-max-percent" value="0.005">
+                                <label class="form-check-label" for="team-max-percent">
+                                    3 goals out of 3 (0.50%)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="teamGroup" id="team-low-percent" value="0.003">
+                                <label class="form-check-label" for="team-low-percent">
+                                    2 goals out of 3 (0.30%)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="teamGroup" id="team-zero-percent" value="0" checked>
+                                <label class="form-check-label" for="team-zero-percent">
+                                    1 goal out of 3 (0%)
+                                </label>
+                            </div>
+                        </div>
+                        <!-- OFFICE -->
+                        <div class="form-check">
+                            <h4 class="mt-2 bg-light shadow-sm rounded">Office %</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="officeGroup" id="office-max-percent" value="0.005">
+                                <label class="form-check-label" for="office-max-percent">
+                                    2 goals out of 2 (0.50%)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="officeGroup" id="office-low-percent" value="0.003">
+                                <label class="form-check-label" for="office-low-percent">
+                                    1 goal out of 2 (0.30%)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="officeGroup" id="office-zero-percent" value="0" checked>
+                                <label class="form-check-label" for="office-zero-percent">
+                                    None
+                                </label>
+                            </div>
+                        </div>
+                        <!-- SUBMIT BUTTON -->
+                        <div class="form-group">
+                            <input type="submit" value="Calculate" class="btn btn-dark btn-block mt-3">
+                        </div>
+                    </form>
+                    <!-- LOADER -->
+                    <!-- <div id="loading">
+                        <img src="img/loading.gif" alt="loading-gif">
+                    </div> -->
+                    <!-- RESULT -->
+                    <div class="pt-4" id="results">
+                        <h5>Results</h5>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Your Monthly Bonus</span>
+                                <input type="text" class="form-control" id="calculated-bonus" disabled>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
