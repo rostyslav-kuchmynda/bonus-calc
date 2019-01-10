@@ -75,6 +75,7 @@ function calculateResults() {
 
         // Clear Error after 3 sec
         setTimeout(clearError, 1800);
+        document.getElementById("loading").style.display = "none";
     }
 
     // Clear Error Function
