@@ -6,7 +6,7 @@ document.getElementById("calc-form").addEventListener('submit', function(e) {
     // Show Loader
     document.getElementById("loading").style.display = "block";
 
-    setTimeout(calculateResults, 2000);
+    setTimeout(calculateResults, 1500);
 
     // Preventing Default Behaviour
     e.preventDefault();
