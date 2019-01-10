@@ -1,8 +1,19 @@
 // Listening for SUBMIT
-document.getElementById("calc-form").addEventListener('submit', calculateResults);
+document.getElementById("calc-form").addEventListener('submit', function(e) {
+    // Hide results
+    document.getElementById("results").style.display = "none";
+
+    // Show Loader
+    document.getElementById("loading").style.display = "block";
+
+    setTimeout(calculateResults, 2000);
+
+    // Preventing Default Behaviour
+    e.preventDefault();
+});
 
 // Calcualte results
-function calculateResults(e) {
+function calculateResults() {
     // UI Vars
     const revenue = document.getElementById("revenue").value;
     const teamValue = Number(document.querySelector("input[name='teamGroup']:checked").value);
@@ -35,6 +46,8 @@ function calculateResults(e) {
         // Displaying result
         if (revenue >= 7000) {
             displayResult.value = `${newRevenue.toFixed(2) + "$"}`;
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("results").style.display = "block";
         }
     }   
     // Calling the function
@@ -68,8 +81,4 @@ function calculateResults(e) {
     function clearError() {
         document.querySelector(".facepalm").remove();
     };
-
-    
-    // Preventing Default Behaviour
-    e.preventDefault();
 };
